@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>محاضرات Object-Oriented Programming</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .lecture-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .lecture-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .lecture-number {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-left: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .lecture-title {
+        font-size: 1.3em;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .lecture-date {
+        color: #666;
+        font-size: 0.95em;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      .lecture-date::before {
+        content: "📅";
+        margin-left: 8px;
+      }
+
+      .watch-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .watch-btn:visited {
+        color: white;
+      }
+
+      .watch-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+      }
+
+      .watch-btn:active {
+        transform: scale(0.98);
+      }
+
+      .lecture-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .lecture-info {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>محاضرات داتا ستركتشر - د. سهاد دراغمة</h1>
+      <h1>الفصل الأول - تجميع AhmadEssawii</h1>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">1</span>
+          <div class="lecture-info">
+            <div class="lecture-title">
+              مقدمة عن Inheritance + شرح public / private / protected
+            </div>
+            <div class="lecture-date">2025/09/22</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/play/51maxGHzqephBOq-owpMXmikdrgl_Clo3eNflGbrgrj_ALPg9t3s5aoHZE_qb4jbFl5qGiRyzrzwsIz9.Gyn4xO0BuS4RDxyi?startTime=1758539919000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">2</span>
+          <div class="lecture-info">
+            <div class="lecture-title">
+              مفاهيم ومصطلحات أساسية في OOP (يوتيوب)
+            </div>
+            <div class="lecture-date">2025/09/25</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://www.youtube.com/watch?v=VmyFhfYQb74', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">3</span>
+          <div class="lecture-info">
+            <div class="lecture-title">
+              تكملة public/private/protected + الفرق بين Overloading و
+              Overriding
+            </div>
+            <div class="lecture-date">2025/09/29</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/share/ttRJAX4ThZR7XR2iQEMWktvE30qbrHk8KG2kD0Jy0CSZ46b9cDnDKW8zlGWC1nFG.vDTqcipcjbGXSCTd?startTime=1759144246000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">4</span>
+          <div class="lecture-info">
+            <div class="lecture-title">شرح أسايمنت المطعم</div>
+            <div class="lecture-date">2025/10/02</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/play/rhnSHWzJ8Dq64Kqe3MovLWevfvFmRXcNj63BNE3217zONiv0Y47jUjPN6gJJ3kBC1jckffhsvVS2DtQF.qQfc2jCS6LoHkYg7?startTime=1759404976000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">5</span>
+          <div class="lecture-info">
+            <div class="lecture-title">
+              أمثلة على Overriding + الفرق بين Overriding و Overloading
+            </div>
+            <div class="lecture-date">2025/10/02</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/play/emehILCvshIYfk8T6ANa1fnx3FVL7pInBaIcI6DsCyviWKlN8fQdTxDEGIka7yrO6iqOlfOSFFfXCuLw._NF6og93usuhaJIp?startTime=1759405632000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">6</span>
+          <div class="lecture-info">
+            <div class="lecture-title">
+              Polymorphism + Abstract Class + Pure Virtual + Concrete Class
+            </div>
+            <div class="lecture-date">2025/10/06</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/share/iL4nhYPhbDLhiiHjkW5DnDK33O97IM69rnisGqltWPdLfevsAb4o9w2jwaMTSzPC.Jfq8mHXj65Hx_3E7?startTime=1759749287000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">7</span>
+          <div class="lecture-info">
+            <div class="lecture-title">
+              Virtual Destructor + Multiple Inheritance + مقدمة Template
+            </div>
+            <div class="lecture-date">2025/10/11</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/share/oz5zQaEnY216w_WJB8uvBIocD33gZGNtFaYHyfU9DX9jez1RJW7s9UxRLniyZ3U.QvBJ7iKhrEGW8Pys?startTime=1760203238000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">8</span>
+          <div class="lecture-info">
+            <div class="lecture-title">تكملة Template + مقدمة ArrayList</div>
+            <div class="lecture-date">2025/10/13</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/play/qm9xdyiLJxplSIQaJGJSWGu4xYAn4bZU_K-K1hD3G_7_fH3xBH_Pqc16f8KG_iwcWeqDpzfxWvAw1o0G.9H0XhjFAPuPYF8hk?startTime=1760245676000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">9</span>
+          <div class="lecture-info">
+            <div class="lecture-title">شرح ArrayList</div>
+            <div class="lecture-date">2025/10/16</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/share/xzPUD5L6MFFTk3_CaM7j2Ju2pa7BzWUxsnGyX_UDQ1PztK8XIrrByNrc-DLc6Lr6.wWxB-hIq4_X3VLAv?startTime=1760615154000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">10</span>
+          <div class="lecture-info">
+            <div class="lecture-title">شرح إضافي لأسايمنت المطعم</div>
+            <div class="lecture-date">2025/10/16</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/share/-aS9NH1LYjaiqjIlAytuFzPMMKMM2j9whxbWqf0cs_TiH5uncHjefj1UkyErf4x3.9NFAEp642bXb0VOK?startTime=1760621573000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">11</span>
+          <div class="lecture-info">
+            <div class="lecture-title">مراجعة ArrayList + شرح Bag</div>
+            <div class="lecture-date">2025/10/20</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/play/uWdwzkUlGOzDry0ftuDIj4AY_q-giMBR1ton7ivyvc_cNeczKcyBkfcGgNYFznKmfQx86ONyTrrCFgLK.YRF21FbeGP5TLNPu?startTime=1760958740000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">12</span>
+          <div class="lecture-info">
+            <div class="lecture-title">تجميع المصطلحات وترتيب الأمور</div>
+            <div class="lecture-date">2025/10/23</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/share/aT5jyN1yJsOS4xVrrunINaSyWkqpmgjXnxH0MMkQugY4Vn1UW7vRcCgZpkOf4s2s.SvJ3hkRfRDWimzzM?startTime=1761217702000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">13</span>
+          <div class="lecture-info">
+            <div class="lecture-title">Linear Search vs Binary Search</div>
+            <div class="lecture-date">2025/10/26</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/play/9RRJUYPoDd4GpDTLnbnR3E4q0xztZPS4_92Af0HYePHdFJo6DIdZj8CKjGJ0x3INSLzPSjDKWu1F4uAl.JPWiQbRSmbYgjGsZ?startTime=1761458731000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">14</span>
+          <div class="lecture-info">
+            <div class="lecture-title">مقدمة LinkedList</div>
+            <div class="lecture-date">2025/10/27</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/play/PO6u6KsQopA701fKlu0chP8KvIkylrHMMhAwrXK0jUgMVGOiY6AjnAHrw-KcPddRuqS5rmFQzvWs8IYZ.LkG2nrsdRfJ4gMt5?startTime=1761566855000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">15</span>
+          <div class="lecture-info">
+            <div class="lecture-title">
+              LinkedList + دوال AddFront / AddBack / PrintLayout
+            </div>
+            <div class="lecture-date">2025/11/03</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/share/fWeeRsUelUcx1Ldx951-kAsCExtHIzmKqOPjhVLRvSxLGrzC1s8FdbbgAAfWGDVp.THEp9UDSXgXahsvY?startTime=1762172407000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">16</span>
+          <div class="lecture-info">
+            <div class="lecture-title">أسئلة مهمة جداً على LinkedList</div>
+            <div class="lecture-date">2025/11/10</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/share/D_vTWDJ8gVCKFTaj4GPXoKenS1tfdvxE7l59F6eF3ZqqUt9l06WPZFfmwrJSQzAW.X1libs4RiWYObaze?startTime=1762777057000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">17</span>
+          <div class="lecture-info">
+            <div class="lecture-title">
+              General LinkedList + Copy List + Copy Constructor
+            </div>
+            <div class="lecture-date">2025/11/17</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/share/IPuHwD-efmNGzA1DSzqzMjicDFEE_qejfBQQiJvuGX-YRkrVWYO61f32AwD-_LC9.1dXckVp6Htr2IyQa?startTime=1763381501000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">18</span>
+          <div class="lecture-info">
+            <div class="lecture-title">Doubly Linked List</div>
+            <div class="lecture-date">2025</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/play/6ymnqyaGU9paed4Vrh7G99atFjJt-1I_BtIOfIXWollM6RBHqCkMgjs73vKKiuyAXTdeSp9k_FT96G2h.pRbIm1FCDzNdpmMx?startTime=1763273378000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">19</span>
+          <div class="lecture-info">
+            <div class="lecture-title">
+              تدريبات إضافية على Doubly Linked List
+            </div>
+            <div class="lecture-date">2025/11/23</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/share/hfl6Ee6ezeCOAezd3X7i2wadtEUbF9LYLg-yWpA6e0laMOBN4Rq9Jwv0C-6rJg7E.R7pUL8K3saJW44F3', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+
+      <div class="lecture-card">
+        <div class="lecture-header">
+          <span class="lecture-number">20</span>
+          <div class="lecture-info">
+            <div class="lecture-title">تكملة شرح Doubly Linked List</div>
+            <div class="lecture-date">2025/11/24</div>
+          </div>
+        </div>
+        <button
+          class="watch-btn"
+          onclick="window.open('https://najah.zoom.us/rec/share/NlKTiZK3YXa4FY0Zd77583RrsdMOM3ebji1D-0ItoShQ8JqiOqeVsNJ13BVLOpgc.2J0QJYI5tt2xivXf?startTime=1763987018000', '_blank')"
+        >
+          🎥 مشاهدة المحاضرة
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
